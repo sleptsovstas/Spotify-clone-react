@@ -1,9 +1,22 @@
+import TheSidebar from "./TheSidebar";
+import TheHeader from "./TheHeader";
+import TheMain from "./TheMain";
+import TheRegistration from "./TheRegistration";
+import TheSidebarOverlay from "./TheSidebarOverlay";
 
 function App() {
   return (
-    <div className='h-screen flex justify-center item-center'>
-      <h1 className='text-7x1 font-black'>Spotify app react</h1>
-    </div>
+    <>
+      <div className="flex flex-grow overflow-auto">
+        <TheSidebar />
+        <TheSidebarOverlay />
+        <div className="flex-1 overflow-auto">
+          <TheHeader />
+          <TheMain />
+        </div>
+      </div>
+      <TheRegistration />
+    </>
   );
 }
 
